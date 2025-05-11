@@ -1,0 +1,30 @@
+---
+import "@/styles/nav.css";
+import SiteLayout from "@/layouts/SiteLayout.astro";
+import User from "./User.astro";
+
+const { title } = Astro.props
+---
+
+<header class="header">
+  <nav>
+    <div>
+      <img src="/favicon.svg" alt="Logo" width="25" height="25" />
+      <h2 class="title">{title}</h2>
+    </div>
+    <ul>
+      <li><a class="header__list-link" href="/">Home</a></li>
+      <li><a class="header__list-link" href="/notes">Notes</a></li>
+      <li><a class="header__list-link" href="/favorites">Favorites</a></li>
+      <li><a class="header__list-link" href="/archive">Archive</a></li>
+      <li><a class="header__list-link" href="/community">Community</a></li>
+      <li><a class="header__list-link" href="/blog">Blog</a></li>
+      <li><a class="header__list-link" href="/faq">FAQ</a></li>
+    </ul>
+  </nav>
+  <div class="user">
+    <SiteLayout>
+      <User />
+    </SiteLayout>
+  </div>
+</header>

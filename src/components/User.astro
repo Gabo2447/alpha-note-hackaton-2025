@@ -1,0 +1,10 @@
+---
+const { userId } = await Astro.locals.auth();
+
+if (!userId) {
+  return console.log('Test');
+}
+
+const user = await Astro.locals.currentUser();
+---
+<div>Welcome, {user?.firstName}!</div>
