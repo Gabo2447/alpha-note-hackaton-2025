@@ -2,14 +2,15 @@
 import "@/styles/nav.css";
 import SiteLayout from "@/layouts/SiteLayout.astro";
 import User from "./User.astro";
+import Favicon from "@/icons/favicon.astro";
 
 const { title } = Astro.props
 ---
 
 <header class="header">
   <nav>
-    <div>
-      <img src="/favicon.svg" alt="Logo" width="25" height="25" />
+    <div class="header__logo">
+      <Favicon width="25" height="25" />
       <h2 class="title">{title}</h2>
     </div>
     <ul>
