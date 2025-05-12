@@ -29,14 +29,16 @@ const { title } = Astro.props;
       <li><a class="header__list-link" href="/faq">FAQ</a></li>
     </ul>
   </nav>
-  <SiteLayout />
+  <div class="user">
+    <SiteLayout />
+  </div>
 </header>
 
 <script>
-  const toggleButton = document.querySelector('.nav-toggle');
-  const navMenu = document.querySelector('.nav-menu');
+  const toggleButton = document.querySelector(".nav-toggle");
+  const navMenu = document.querySelector(".nav-menu");
 
-  toggleButton.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+  toggleButton.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
   });
 </script>
