@@ -38,9 +38,6 @@
   padding-block: 10px;
 }
 
-.btn__hero-1 button {
-}
-
 .btn__hero-2 button {
   border: 1px solid var(--input-border);
   background-color: transparent;
