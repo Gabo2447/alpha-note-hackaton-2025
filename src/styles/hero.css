@@ -32,11 +32,9 @@
 
 .btns {
   width: 100%;
-}
-
-.btn__hero {
-  width: 100%;
-  padding-block: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
 }
 
 .btn__hero-2 button {

@@ -28,6 +28,10 @@ div, ul {
   gap: 20px;
 }
 
+nav ul {
+  align-items: center;
+}
+
 .title {
   font-family: var(--font-family-primary);
   font-size: 1.2rem;
@@ -54,8 +58,78 @@ header button {
   padding: .5rem 1.5rem;
 }
 
+header nav div + button:focus {
+  background-color: transparent;
+}
+
 .user {
   align-items: center;
   font-weight: var(--font-weight-medium);
   color: var(--text-secondary);
+  gap: 10px;
+}
+
+.user__login {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Estilos para el botón hamburguesa */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--text-secondary);
+  border-radius: 2px;
+  transition: all 0.3s linear;
+  position: relative;
+}
+
+/* Ocultar menú en móvil */
+@media (max-width: 768px) {
+  nav {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--background-primary);
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 10;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    padding: 0.5rem 2rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* Opcional: ajustar el layout del nav para que el logo y el botón estén alineados */
+  nav > .header__logo {
+    flex-grow: 1;
+  }
 }
