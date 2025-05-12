@@ -21,6 +21,7 @@
 .hero__content {
   max-width: 100%;
   flex-direction: column;
+  place-content: center;
 }
 
 .hero svg {

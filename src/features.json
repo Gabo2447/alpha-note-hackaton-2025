@@ -1,0 +1,24 @@
+{
+  "features": [
+    {
+      "icon": "@/icons/docs.astro",
+      "title": "Notas Rápidas",
+      "description": "Captura ideas, listas y pensamientos en cualquier momento."
+    },
+    {
+      "icon": "@/icons/book.astro",
+      "title": "Centro de Conocimiento",
+      "description": "Organiza información clave y recursos para tu día a día."
+    },
+    {
+      "icon": "@/icons/trophy.astro",
+      "title": "Logros",
+      "description": "Visualiza y celebra el avance de tus metas personales o de equipo."
+    },
+    {
+      "icon": "@/icons/web.astro",
+      "title": "Publica Fácil",
+      "description": "Comparte tus páginas como sitios web en segundos, sin complicaciones."
+    }
+  ]
+}

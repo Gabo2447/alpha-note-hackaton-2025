@@ -9,9 +9,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/node": "^9.2.1",
     "@astrojs/vercel": "^8.1.4",
     "@clerk/astro": "^2.7.2",
     "astro": "^5.7.12"
+  },
+  "devDependencies": {
+    "@jasikpark/astro-svg-loader": "^0.3.1"
   }
 }

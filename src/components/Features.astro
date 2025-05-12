@@ -1,0 +1,40 @@
+---
+import Docs from "@/icons/docs.astro";
+import Book from "@/icons/book.astro";
+import Trophy from "@/icons/trophy.astro";
+import Web from "@/icons/web.astro";
+
+import { features } from "@/features.json";
+
+import "@/styles/features.css";
+
+const iconComponents = {
+  "@/icons/docs.astro": Docs,
+  "@/icons/book.astro": Book,
+  "@/icons/trophy.astro": Trophy,
+  "@/icons/web.astro": Web
+} as const satisfies Record<string, (_props: Record<string, any>) => any>;
+---
+
+<section class="features">
+  <h2 class="features__title">
+    Todo lo que necesitas para obtener los mejores resultados
+  </h2>
+  <div class="features__section">
+    {
+      features.map((feature) => {
+        const IconComponent = iconComponents[feature.icon as keyof typeof iconComponents];
+
+        return (
+          <div class="feature__content">
+            <a href="/" class="feature__content-ancler">
+              <IconComponent width="80" height="80" />
+              <span>{feature.title}</span>
+              <p>{feature.description}</p>
+            </a>
+          </div>
+        );
+      })
+    }
+  </div>
+</section>

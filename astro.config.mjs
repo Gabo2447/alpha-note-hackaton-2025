@@ -1,10 +1,9 @@
-// @ts-check
 import { defineConfig } from "astro/config";
-import node from "@astrojs/node";
+import vercel from "@astrojs/vercel/serverless";
 import clerk from "@clerk/astro";
 
 export default defineConfig({
   integrations: [clerk()],
-  adapter: node({ mode: "standalone" }),
-  output: "server"
+  adapter: vercel(),
+  output: "server",
 });
