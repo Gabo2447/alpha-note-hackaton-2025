@@ -1,0 +1,6 @@
+ignoredBuiltDependencies:
+  - '@jasikpark/astro-svg-loader'
+onlyBuiltDependencies:
+  - '@clerk/shared'
+  - esbuild
+  - sharp

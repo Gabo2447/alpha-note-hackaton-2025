@@ -1,19 +1,14 @@
 ---
-import Docs from "@/icons/docs.astro";
-import Book from "@/icons/book.astro";
-import Trophy from "@/icons/trophy.astro";
-import Web from "@/icons/web.astro";
-
-import { features } from "@/features.json";
+import { features } from "@/data/features.json";
 
 import "@/styles/features.css";
 
-const iconComponents = {
-  "@/icons/docs.astro": Docs,
-  "@/icons/book.astro": Book,
-  "@/icons/trophy.astro": Trophy,
-  "@/icons/web.astro": Web
-} as const satisfies Record<string, (_props: Record<string, any>) => any>;
+const iconImports = {
+  "@/icons/docs.astro": await import("@/icons/docs.astro"),
+  "@/icons/book.astro": await import("@/icons/book.astro"),
+  "@/icons/trophy.astro": await import("@/icons/trophy.astro"),
+  "@/icons/web.astro": await import("@/icons/web.astro")
+};
 ---
 
 <section class="features">
@@ -24,7 +19,7 @@ const iconComponents = {
     <!-- No se si se me rompa la app, pero funciona esto :DDD -->
     {
       features.map((feature) => {
-        const IconComponent = iconComponents[feature.icon as keyof typeof iconComponents];
+        const IconComponent = iconImports[feature.icon as keyof typeof iconImports].default;
 
         return (
           <div class="feature__content">

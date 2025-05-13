@@ -1,0 +1,50 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import OpenAI from "@/icons/openai.astro";
+
+import "@/styles/contact.css";
+import contact from "@/data/contact.json";
+---
+
+<Layout title="AlphaNote" subtitle="Contacto">
+  <div class="contact">
+    <div class="contact__content">
+      <h1>Contacta a nuestro equipo comercial</h1>
+      <p>
+        Contacta al equipo comercial para saber más sobre cómo AlphaNote puede
+        ayudar a tu empresa.
+      </p>
+      <div class="contact__content-poema">
+        <OpenAI height="28" />
+        <span class="poema">
+          "La gente necesita una aplicación donde alojar los conocimientos para
+          todo el equipo y para avanzar a la par de los cambios de OpenAl. Una
+          sola plataforma donde puedes hacer todo el trabajo es algo muy
+          poderoso. Notion es ese lugar que tiene todo"
+        </span>
+      </div>
+    </div>
+    <div class="contact__form">
+      <form action="#" class="contact__form-section" id="contact-form">
+        {
+          contact.contact.contact_input.map((item) => {
+            return (
+              <div class="form__section">
+                <label class="form__label" for="name">{item.label}</label>
+                <input
+                  class="input__contact"
+                  type={typeof item.type === "string" ? (item.type as 'text' | 'email' | 'password' | 'number' | 'tel' | 'url') : "text"}
+                  name="name"
+                  required={item.required}
+                  placeholder={typeof item.name === "string" ? item.name : ""}
+                />
+              </div>
+            );
+          })
+        }
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+</Layout>
+

@@ -7,6 +7,7 @@
   --text-primary: #ffffff;
   --text-secondary: #cbd5e1;
   --accent-blue: #3b82f6;
+  --accent-red:rgb(247, 46, 46);
   --accent-purple: #a259ff;
   --accent-cyan: #22d3ee;
   --button-primary-bg: #3b82f6;
@@ -24,6 +25,7 @@
   --font-size-h2: 2.25rem;
   --font-size-h3: 1.75rem;
   --font-size-h4: 1.4rem;
+  --font-size-poems: 1.1rem;
   --font-size-body: 1rem;
   --font-size-small: 0.875rem;
   --font-weight-regular: 400;

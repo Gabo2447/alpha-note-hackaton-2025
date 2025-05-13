@@ -1,0 +1,84 @@
+{
+  "contact": {
+    "contact_input": [
+      {
+        "label": "Nombre",
+        "name": "Gabriel",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Apellido",
+        "name": "Alejandro",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Email Profecional",
+        "name": "",
+        "type": "email",
+        "required": true
+      },
+      {
+        "label": "Puesto",
+        "name": "",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Empresa",
+        "name": "Alpha S.A",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Telefono",
+        "name": "(123) 456-7890",
+        "type": "tel",
+        "required": false
+      },
+      {
+        "label": "Motivo del Contacto",
+        "name": "Selecciona...",
+        "type": "select",
+        "required": true
+      },
+      {
+        "label": "Brinda más detalles (opcional)",
+        "name": "¿Cómo tenías pensado usar AlphaNote?",
+        "type": "text",
+        "required": false
+      }
+    ],
+    "contact-select": [
+      {
+        "label": "País o Region",
+        "name": [
+          "Selecciona...",
+          "Argentina",
+          "Chile",
+          "Colombia",
+          "Peru",
+          "Venezuela",
+          "Otros"
+        ],
+        "type": "select",
+        "required": true
+      },
+      {
+        "label": "Tamaño de la Empresa",
+        "name": [
+          "Selecciona...",
+          "1-10",
+          "11-50",
+          "51-100",
+          "101-500",
+          "501-1000",
+          "1001+"
+        ],
+        "type": "select",
+        "required": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+---
+import Github from "@/icons/github.astro";
+import Linkedin from "@/icons/linkedin.astro";
+import Discord from "@/icons/discord.astro";
+---
+
+<footer class="footer">
+  <p>
+    AlphaNote &copy; 2025 | Hackaton Midudev Clerk | by <a
+      href="https://github.com/Gabo2447">Gabriel Alejandro</a>
+  </p>
+  <ul class="footer__ul">
+    <li class="footer__li"><a target="_blank" href="https://github.com/Gabo2447"><Github width="25" height="25"/></a></li>
+    <li class="footer__li"><a target="_blank" href="https://linkedin.com/in/Gabo2447"><Linkedin width="25" height="25"/></a></li>
+    <li class="footer__li"><a target="_blank" href="https://discord.com/users/930530005686034503"><Discord width="25" height="25"/></a></li>
+  </ul>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--input-border);
+    padding: var(--spacing-md);
+    text-align: center;
+  }
+  .footer__ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: var(--spacing-md);
+  }
+
+  .footer__li {
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    padding: var(--spacing-xs);
+  }
+  .footer__li:hover {
+    background-color: var(--input-background);
+  }
+</style>

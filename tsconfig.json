@@ -5,7 +5,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@clerk/astro": ["node_modules/@clerk/astro/dist/index.d.ts"]
     },
+    "types": ["@clerk/astro"]
   }
 }
